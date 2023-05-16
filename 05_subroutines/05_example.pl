@@ -1,21 +1,26 @@
 # create a subroutine
 sub my_subroutine
 {
-	print("This is my 1st subroutine call.\n\n");	}
-# create subroutine that takes one
+	print("This is my 1st subroutine call.\n\n");	
+}
+
+# create subroutine that takes one
 # parameter called name.
 sub get_name
 {
+    # These variables defined within my() are only visibal locally
 	my($name) = @_;
 	print("Hello, ", $name, "\n\n");	
 }
 
-sub add_numbers
+
+sub add_numbers
 {
 	my($x, $y) = @_;
 	return ($x + $y);
 }
-# call the my_subroutine.
+
+# call the my_subroutine.
 &my_subroutine();
 
 # call get_name subroutine with a
@@ -28,6 +33,7 @@ sub get_name
 # in a variable called sum.
 $sum = &add_numbers(27, 45);
 
-# Display the sum in the system
+
+# Display the sum in the system
 # console.
 print("The sum is ", $sum, ".\n\n");
